@@ -23,4 +23,4 @@ let jumlahHuruf = num.map(number => ({
     number,
     jumlahHuruf: number.length
 }));
-console.table(jumlahHuruf)
+console.table(jumlahHuruf);
