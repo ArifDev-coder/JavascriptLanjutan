@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            font-weight: border;
+            width: 100px;
+            height: 100px;
+            color: white;
+            display: flex;
+            border-radius: 12px;
+            justify-content: center;
+            align-items: center;
+            margin: 50px auto;
+            border: 1px solid black;
+            transition: .3s width,
+                        .3s height .3s, 
+                        .3s margin-top, 
+                        1s background-color;
+        }
+        .size {
+            width: 150px;
+            height: 150px;
+            margin-top: 25px;
+        }
+        .caption {
+            background-color: black;
+            box-shadow: 12px 12px 12px grey;
+        }
+        </style>
+</head>
+<body>
+    <div class="box">WELCOME</div>
+    <script src="main.js"></script>
+</body>
+</html>
