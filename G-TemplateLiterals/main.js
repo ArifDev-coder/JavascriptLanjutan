@@ -70,28 +70,57 @@
 
 // 4. Nested
 // HTML Fragments bersarang
-const ssw = {
-    nama: 'Arif',
-    kelas: 8,
-    Ekstrakurikuler: [
-        `Taekwondo`,
-        `Pemprograman`
-    ]
+// const ssw = {
+//     nama: 'Arif',
+//     kelas: 8,
+//     Ekstrakurikuler: [
+//         `Taekwondo`,
+//         `Pemprograman`
+//     ]
+// }
+
+// function cetakEkstrakurikuler(Ekstrakurikuler) {
+//     return `
+//         <ol>
+//             ${Ekstrakurikuler.map(mk => `<li>${mk}</li>`).join('')}
+//         </ol>
+//     `
+// }
+
+// const el = `<div class="ssw">
+//     <h2>Nama: ${ssw.nama}</h2>
+//     <span class="Kelas">Kelas: ${ssw.kelas}</span>
+//     <h4>Ekstrakurikuler: </h4>
+//     ${cetakEkstrakurikuler(ssw.Ekstrakurikuler)}
+// </div>`
+
+// document.body.innerHTML = el;
+
+// Tagged Templates
+// const nama = 'Arif';
+// const umur = 14;
+
+// function coba(strings,...values) {
+//     // let result = '';
+//     // strings.forEach((str, i) => {
+//     //     result+= `${str}${values[i] || ''}`;
+//     // });
+//     // return result;
+//     return strings.reduce((result, str, i) => `${result}${str}${values[i] || ''}`, '');
+// }
+
+// const str = coba`Halo, nama saya ${nama}, saya ${umur} tahun.`;
+// console.log(str);
+
+// Highlight
+const nama = 'Arif';
+const umur = 14;
+const email = 'email@email.com'
+
+function Highlight(strings,...values) {
+    return strings.reduce((result, str, i) => `${result}${str}<span class=hl>${values[i] || ''}</span>`, '');
 }
 
-function cetakEkstrakurikuler(Ekstrakurikuler) {
-    return `
-        <ol>
-            ${Ekstrakurikuler.map(mk => `<li>${mk}</li>`).join('')}
-        </ol>
-    `
-}
+const str = Highlight`Halo, nama saya ${nama}, saya ${umur} tahun. Email saya adalah ${email}`;
 
-const el = `<div class="ssw">
-    <h2>Nama: ${ssw.nama}</h2>
-    <span class="Kelas">Kelas: ${ssw.kelas}</span>
-    <h4>Ekstrakurikuler: </h4>
-    ${cetakEkstrakurikuler(ssw.Ekstrakurikuler)}
-</div>`
-
-document.body.innerHTML = el;
+document.body.innerHTML = str;
