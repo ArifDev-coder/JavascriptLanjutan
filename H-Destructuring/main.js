@@ -97,3 +97,5 @@ const perkenalan = ['Hello', 'Nama', 'Saya', 'Arif'];
 //     return id;
 // }
 // console.log(getIdSsw(ssw));
+
+// This is arch linux write
