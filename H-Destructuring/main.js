@@ -99,3 +99,66 @@ const perkenalan = ['Hello', 'Nama', 'Saya', 'Arif'];
 // console.log(getIdSsw(ssw));
 
 // This is arch linux write
+
+
+function c(values) {
+    console.log(values);
+}
+
+
+// Destructuring Function
+
+// function kalkulasi(a, b) {
+//     return [a + b, a - b, a * b, a / b];
+// }
+
+// const [jumlah, kali] = penjumlahanPerkalian(2, 5);
+// c(jumlah);
+// c(kali);
+
+// const [tambah, kurang, kali, bagi, sisaBagi = 'Operasi tidak ditemukan!'] = kalkulasi(4, 5);
+// c(tambah);
+// c(kurang);
+// c(kali);
+// c(bagi);
+// c(sisaBagi);
+
+// function kalkulasi(a, b) {
+//     return {
+//         tambah: a + b,
+//         kurang: a - b,
+//         kali: a * b,
+//         bagi: a / b
+//     }
+// }
+
+// const { bagi, kurang, tambah, kali } = kalkulasi(10, 2);
+// c(tambah);
+// c(kurang);
+// c(kali);
+// c(bagi);
+
+// Destructuring function arguments
+
+// const sws1 = {
+//     nama: 'Aarif',
+//     umur: 14
+// }
+// function ctkSws(sws1) {
+//     return `Halo, nama saya ${sws1.nama}, saya umur ${sws1.umur} tahun.`
+// }
+// c(ctkSws(sws1));
+
+const sws1 = {
+    nama: 'Aarif',
+    umur: 14,
+    nilai: {
+        tugas: 80,
+        uts: 85,
+        uas: 90
+    }
+}
+function ctkSws({nama, umur, nilai: {tugas, uts, uas}}) {
+    return `Halo, nama saya ${nama}, saya umur ${umur} tahun. Nilai UAS saya ${uas}, nilai uts saya ${uts}`;
+}
+c(ctkSws(sws1));
