@@ -31,3 +31,4 @@ const hrf = [...nama.textContent]
     .map(h => `<span>${h}</span>`)
     .join(' ');
 nama.innerHTML = hrf;
+// Tutor gae felix
