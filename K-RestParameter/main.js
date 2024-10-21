@@ -19,6 +19,23 @@
 // console.log(penjumlahan(1, 2, 3 ,4 , 5));
 
 // array destructuring
-const kelompok1 = ['Arif', 'Bilal', 'Herda', 'Yahya', 'Adam'];
-const [ketua, wakil, ...anggota] = kelompok1;
-console.log(ketua);
+// const kelompok1 = ['Arif', 'Bilal', 'Herda', 'Yahya', 'Adam'];
+// const [ketua, wakil, ...anggota] = kelompok1;
+// console.log(ketua);
+
+// Object Destructuring
+// const team ={
+//     ProjectManajer: 'Arif',
+//     FrontEnd: 'Ricko',
+//     BackEnd: 'Felix',
+//     UiUx: 'Jefri',
+//     DevOps: 'Dicky'
+// }
+// const {ProjectManajer, ...myteam} = team;
+// console.log(ProjectManajer);
+
+// filtering
+function filterBy(type, ...values) {
+    return values.filter(v => typeof v === type);
+}
+console.log(filterBy('string', 3, 5, false, 'string', true, 0, 'Arif'));

@@ -1,0 +1,23 @@
+[
+    {
+        "nama": "Achmad Zainul Arif",
+        "kelas": "8C",
+        "email": "arif@gmail.com",
+        "jurusan": "sistem informasi",
+        "noAbsen": 1
+    },
+    {
+        "nama": "Jefri",
+        "kelas": "8C",
+        "email": "jefri@gmail.com",
+        "jurusan": "kepolisian",
+        "noAbsen": 7 
+    },
+    {
+        "nama": "Felix",
+        "kelas": "8A",
+        "email": "jefri@gmail.com",
+        "jurusan": "3d modeling",
+        "noAbsen": 25
+    }
+]
