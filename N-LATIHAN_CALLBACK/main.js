@@ -1,9 +1,11 @@
-// API KEY = 1c8c5f33
-// http://www.omdbapi.com/?apikey=1c8c5f33&
+// tidak dapat mengambil data dari .e
+import { API_KEY_ALL_FILM, API_KEY_MODAL } from "./env";
+
+console.log(API_KEY_ALL_FILM)
 
 $('.search-button').on('click', function() {
     $.ajax({
-        url: 'http://www.omdbapi.com/?apikey=1c8c5f33&s=' + $('.input-keyword').val(),
+        url: API_KEY_ALL_FILM + $('.input-keyword').val(),
         success: results => {
             const movies = results.Search;
             let cards = '';
@@ -14,7 +16,7 @@ $('.search-button').on('click', function() {
             // ketika tombol detail di-klik
             $('.modal-detail-button').on('click', function() {
                 $.ajax({
-                    url: 'http://www.omdbapi.com/?apikey=1c8c5f33&i=' + $(this).data('imdbid'),
+                    url: API_KEY_MODAL + $(this).data('imdbid'),
                     success: m => {
                         const movieDetail = showMovieDetails(m);
                         $('.modal-body').html(movieDetail)
